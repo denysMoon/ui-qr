@@ -1,5 +1,5 @@
 import { useForm, SubmitHandler } from "react-hook-form";
-import { getQr } from "../api/qr";
+import { useBase64 } from "../hooks/useBase64";
 
 type Inputs = {
   qrString: string;
@@ -12,9 +12,10 @@ export const Form = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
+  const { getBase64 } = useBase64();
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    getQr(data.qrString);
+    getBase64(data.qrString);
   };
 
   return (

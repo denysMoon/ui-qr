@@ -1,16 +1,13 @@
 import axios from "axios";
 import { BASE_URL } from "../constants";
 
-interface IResponse {
-  data: string;
-  status: number;
-}
-
-export const getQr = async (searchString: string): Promise<IResponse> => {
+export const getQr = async (searchString: string): Promise<string> => {
   try {
-    const { data } = await axios.post(`${BASE_URL}/get-qr-code`, {
+    const result = await axios.post(`${BASE_URL}/get-qr-code`, {
       "qr-str": searchString,
     });
+
+    const { data } = result;
 
     return data;
   } catch (error) {
