@@ -9,4 +9,4 @@ export const ROUTES = [
   },
 ];
 
-export const BASE_URL = "https://fastify-qr.onrender.com/api/";
+export const BASE_URL = "https://fastify-qr.onrender.com/api";
