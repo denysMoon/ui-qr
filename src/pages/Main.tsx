@@ -1,9 +1,10 @@
-import { useEffect } from "react";
-import { getQr } from "../api/qr";
+import { Form } from "../components/Form";
 
 export const Main: React.FC = () => {
-  useEffect(() => {
-    getQr("www");
-  });
-  return <h1>Main</h1>;
+  return (
+    <div>
+      <h1>Main</h1>
+      <Form />
+    </div>
+  );
 };

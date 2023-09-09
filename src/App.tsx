@@ -8,6 +8,7 @@ import { PageNotFound } from "./pages/PageNotFound";
 import { Layout } from "./components/Layout";
 import { Main } from "./pages/Main";
 import { Instruction } from "./pages/Instruction";
+import { About } from "./pages/About";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const router = createBrowserRouter(
@@ -15,6 +16,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route index element={<Main />} />
       <Route path="/how-to" element={<Instruction />} />
+      <Route path="/about" element={<About />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>
   )
