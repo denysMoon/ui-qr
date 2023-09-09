@@ -8,6 +8,7 @@ import { PageNotFound } from "./pages/PageNotFound";
 import { Layout } from "./components/Layout";
 import { Main } from "./pages/Main";
 import { Instruction } from "./pages/Instruction";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
