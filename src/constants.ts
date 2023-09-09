@@ -8,3 +8,5 @@ export const ROUTES = [
     name: "Hot to use",
   },
 ];
+
+export const BASE_URL = "https://fastify-qr.onrender.com/api/";
