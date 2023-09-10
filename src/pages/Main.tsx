@@ -6,8 +6,8 @@ export const Main: React.FC = () => {
   const { base64, loading, getBase64 } = useBase64();
 
   return (
-    <div>
-      <h1>Get your QR code</h1>
+    <div className="contentWrapper">
+      <h1>Get your QR-code</h1>
       <Form getBase64={getBase64} />
       <QrImage base64={base64} loading={loading} />
     </div>
