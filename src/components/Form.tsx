@@ -1,18 +1,20 @@
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useBase64 } from "../hooks/useBase64";
 
 type Inputs = {
   qrString: string;
   required: string;
 };
 
-export const Form = () => {
+interface IForm {
+  getBase64: (searchString: string) => Promise<void>;
+}
+
+export const Form: React.FC<IForm> = ({ getBase64 }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
-  const { getBase64 } = useBase64();
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     getBase64(data.qrString);
