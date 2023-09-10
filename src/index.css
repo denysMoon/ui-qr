@@ -1,4 +1,13 @@
+a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
 .active {
-    border-bottom: 1px solid black;
-  }
+  border-bottom: 1px solid black;
+}
+
+
+
   

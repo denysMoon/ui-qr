@@ -1,16 +1,20 @@
 import axios from "axios";
 import { BASE_URL } from "../constants";
 
-export const getQr = async (searchString: string): Promise<any> => {
+interface QrResponse {
+  status: number;
+  data: string;
+}
+
+export const getQr = async (searchString: string): Promise<QrResponse> => {
   try {
-    const { data } = await axios.post(`http://localhost:8000/api/get-qr-code`, {
+    const result = await axios.post(`${BASE_URL}/get-qr-code`, {
       "qr-str": searchString,
     });
 
-    console.log(data);
-
-    return data;
+    return result;
   } catch (error) {
     console.error("Error fetching QR:", error);
+    throw error;
   }
 };

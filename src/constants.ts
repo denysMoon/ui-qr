@@ -7,6 +7,10 @@ export const ROUTES = [
     path: "/how-to",
     name: "Hot to use",
   },
+  {
+    path: "/about",
+    name: "About",
+  },
 ];
 
-export const BASE_URL = "https://fastify-qr.onrender.com/api/";
+export const BASE_URL = "https://fastify-qr.onrender.com/api";

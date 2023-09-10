@@ -1,9 +1,21 @@
-import { useEffect } from "react";
-import { getQr } from "../api/qr";
+import { useBase64 } from "../hooks/useBase64";
+import { Form } from "../components/Form";
+import { QrImage } from "../components/QrImage";
 
 export const Main: React.FC = () => {
-  useEffect(() => {
-    getQr("www");
-  });
-  return <h1>Main</h1>;
+  const { base64, loading, getBase64 } = useBase64();
+
+  console.log(loading);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div>
+      <h1>Get your QR code</h1>
+      <Form getBase64={getBase64} />
+      <QrImage base64={base64} />
+    </div>
+  );
 };
