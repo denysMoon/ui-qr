@@ -10,3 +10,5 @@ export const ROUTES = [
 ];
 
 export const BASE_URL = "https://fastify-qr.onrender.com/api";
+
+export const VERCEL = "https://ui-qr.vercel.app/";

@@ -9,8 +9,8 @@ export const About: React.FC = () => {
         On the frontend, a tech stack was used, including React for the user
         interface, TypeScript for strong typing, React-Bootstrap for responsive
         components, and Axios for handling API requests. Additionally,
-        react-hook-forms were used to efficiently manage forms within the
-        application. This combination of technologies ensures a seamless and
+        react-hook-forms and yup were used to efficiently manage forms within
+        the application. This combination of technologies ensures a seamless and
         responsive user experience.
       </p>
     </div>

@@ -9,6 +9,7 @@ a {
 }
 
 .loaderWrapper{
+  margin-top: 80px;
   display: flex;
 }
 
