@@ -1,7 +1,7 @@
 import Loader from "./Loader";
 
 interface IQrImage {
-  base64: string;
+  base64?: string;
   loading: boolean;
 }
 
